@@ -9,10 +9,10 @@
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
 
     <!--==================== SWIPER CSS ====================-->
-    <link rel="stylesheet" href="">
+    <link rel="stylesheet" href="./assets/css/swiper-bundle.min.css">
 
     <!--==================== CSS ====================-->
-    <link rel="stylesheet" href="">
+    <link rel="stylesheet" href="./assets/css/styles.css">
 
     <title>Responsive Portfolio Website</title>
 </head>
@@ -20,7 +20,51 @@
 <body>
     <!--==================== HEADER ====================-->
     <header class="header" id="header">
+        <nav class="nav container">
+            <a href="" class="nav__logo">Steins Tech</a>
 
+            <div class="nav__menu" id="nav-menu">
+                <ul class="nav__list grid">
+                    <li class="nav__item">
+                        <a href="#home" class="nav__link">
+                            <i class="uil uil-estate"></i>HOME
+                        </a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#about" class="nav__link">
+                            <i class="uil uil-user">ABOUT</i>
+                        </a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#skills" class="nav__link">
+                            <i class="uil uil-file-alt">SKILLS</i>
+                        </a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#services" class="nav__link">
+                            <i class="uil uil-briefcase-alt">SERVICES</i>
+                        </a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#portfolio" class="nav__link">
+                            <i class="uil uil-scenery">PORTFOLIO</i>
+                        </a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#contact" class="nav__link">
+                            <i class="uil uil-message">CONTACT</i>
+                        </a>
+                    </li>
+                </ul>
+                <i class="uil uil-times nav__close" id="nav-close"></i>
+            </div>
+
+            <div class="nav__btns">
+                <div class="nav__toggle" id="nav-toggle">
+                    <i class="uil uil-apps"></i>
+                </div>
+            </div>
+        </nav>
     </header>
 
     <!--==================== MAIN ====================-->
