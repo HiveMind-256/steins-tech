@@ -697,7 +697,8 @@ img {
     content: "";
 } */
 
-.swiper-portfolio-icon {
+
+/* .swiper-portfolio-icon {
     font-size: 1.5rem;
     color: var(--first-color);
 }
@@ -708,6 +709,13 @@ img {
 
 .swiper-button-next {
     font-size: 10px;
+} */
+
+.swiper-icon {
+    font-size: 2.2rem;
+    justify-content: center;
+    align-items: center;
+    margin-left: 47%;
 }
 
 
