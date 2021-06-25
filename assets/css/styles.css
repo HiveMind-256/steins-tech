@@ -359,6 +359,15 @@ img {
     transition: .3s;
 }
 
+.button--white {
+    background-color: #fff;
+    color: var(--first-color);
+}
+
+.button--white:hover {
+    background-color: white;
+}
+
 .button__icon:hover {
     transform: translateX(1.2rem);
 }
@@ -758,6 +767,11 @@ img {
 .project__title,
 .project__description {
     color: #fff;
+}
+
+.project__img {
+    width: 232px;
+    justify-self: center;
 }
 
 
