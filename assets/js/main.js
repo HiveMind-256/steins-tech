@@ -84,9 +84,19 @@ let swiper = new Swiper('.swiper-container', {
         nextEl: 'swiper-button-next',
         prevEl: 'swiper-button-prev',
     },
+    pagintion:{
+        el: '.swiper-pagination',
+        dynamicBullets:true,
+        clickable:true
+    },
  
     mousewheel: true,
-    keyboard: true
+    keyboard: true,
+    breakpoints:{
+        568:{
+            slidesPerView:2
+        }
+    }
 })
 
 /*==================== TESTIMONIAL ====================*/
