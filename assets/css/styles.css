@@ -26,6 +26,8 @@
     --input-color: hsl(var(--hue-color), 70%, 96%);
     --body-color: hsl(var(--hue-color), 60%, 99%);
     --container-color: #fff;
+    --scroll-bar-color: hsl(var(--hue-color), 12%, 90%);
+    --scroll-thumb-color: hsl(var(--hue-color), 12%, 80%);
     /*========== Font and typography ==========*/
     --body-font: 'Poppins', sans-serif;
     ;
@@ -74,8 +76,35 @@
 
 /*========== Variables Dark theme ==========*/
 
+body.dark-theme {
+    --first-color-second: hsl(var(--hue-color), 30%, 8%);
+    --title-color: hsl(var(--hue-color), 8%, 95%);
+    --text-color: hsl(var(--hue-color), 8%, 75%);
+    --input-color: hsl(var(--hue-color), 29%, 16%);
+    --body-color: hsl(var(--hue-color), 28%, 12%);
+    --container-color: hsl(var(--hue-color), 29%);
+    --scroll-bar-color: hsl(var(--hue-color), 12%, 48%);
+    --scroll-thumb-color: hsl(var(--hue-color), 12%, 36%);
+}
+
 
 /*========== Button Dark/Light ==========*/
+
+.nav__btns {
+    align-items: center;
+    display: flex;
+}
+
+.change-theme {
+    font-size: 1.25rem;
+    color: var(--title-color);
+    margin-right: var(--mb-1);
+    cursor: pointer;
+}
+
+.change-theme:hover {
+    color: var(--first-color);
+}
 
 
 /*==================== BASE ====================*/
@@ -257,6 +286,10 @@ img {
 
 
 /* Change background header */
+
+.scroll-header {
+    box-shadow: 0 -4px 16px rgba(0, 0, 0, 0.25);
+}
 
 
 /*==================== HOME ====================*/
@@ -939,11 +972,51 @@ img {
 
 /*========== SCROLL UP ==========*/
 
+.scrollup {
+    position: fixed;
+    right: 1rem;
+    bottom: -20%;
+    background-color: var(--first-color);
+    opacity: .8;
+    padding: 0, .3rem;
+    z-index: var(--z-tooltip);
+    transition: .4s;
+    border-radius: .4rem;
+}
+
+.scrollup:hover {
+    background-color: var(--first-color-alt);
+}
+
+.scrollup__icon {
+    font-size: 1.5rem;
+    color: white;
+}
+
 
 /* Show scroll */
 
+.show-scroll {
+    bottom: 5rem;
+}
+
 
 /*========== SCROLL BAR ==========*/
+
+::-webkit-scrollbar {
+    width: .60rem;
+    background-color: var(--scroll-bar-color);
+    border-radius: .5rem;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: var(--scroll-thumb-color);
+    border-radius: .5rem;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: var(--text-color-light);
+}
 
 
 /*==================== MEDIA QUERIES ====================*/
@@ -951,8 +1024,65 @@ img {
 
 /* For small devices */
 
+@media screen and (max-width:350px) {
+    .container {
+        margin-left: var(--mb-1);
+        margin-right: var(--mb-1);
+    }
+    .nav__menu {
+        padding: 2rem .25rem 4rem;
+    }
+    .nav__list {
+        column-gap: 0;
+    }
+    .home__content {
+        grid-template-columns: .25fr 3fr;
+    }
+    .home__blob {
+        width: 180px;
+    }
+    .skills__title {
+        font-size: var(--normal-font-size);
+    }
+    .services__container {
+        grid-template-columns: max-content;
+        justify-content: center;
+    }
+    .services__content {
+        padding-right: 3.5rem;
+    }
+    .services__modal {
+        padding: 0.5rem;
+    }
+    .project__img {
+        width: 200px;
+    }
+    .testimonial__data,
+    .testimonial__header {
+        flex-direction: column;
+        align-items: center;
+    }
+    .testimonial__img {
+        margin-right: 0;
+        margin-bottom: var(--mb-0-25);
+    }
+}
+
 
 /* For medium devices */
+
+@media screen and (max-width:568px) {
+    .home__content {
+        grid-template-columns: max-content 1fr 1fr;
+    }
+    .home__data {
+        grid-column: initial;
+    }
+    .home__img {
+        order: 1;
+        justify-self: center;
+    }
+}
 
 
 /* For large devices */
