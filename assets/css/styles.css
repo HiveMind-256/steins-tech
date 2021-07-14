@@ -554,10 +554,6 @@ img {
 
 /*==================== SERVICES ====================*/
 
-.services {
-    margin-top: 80px;
-}
-
 .services__container {
     gap: 1.5rem;
     grid-template-columns: repeat(2, 1fr);
@@ -1111,7 +1107,7 @@ img {
     }
     .portfolio__img {
         width: 320px;
-        height: 310px;
+        height: 300px;
     }
     .portfolio__content {
         align-items: center;
